@@ -1,0 +1,158 @@
+img,
+svg {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+svg,
+button {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  content: "";
+  position: absolute;
+}
+
+html {
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 10px;
+}
+
+.main-section {
+  height: 100svh;
+  flex: 1;
+  display: flex;
+}
+.main-section > * {
+  height: 100%;
+}
+
+.sidenav {
+  height: 100svh;
+  width: 70px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 20px;
+}
+.sidenav__logo {
+  height: 50px;
+  padding-bottom: 20px;
+}
+.sidenav__navItems {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.sidenav__navItems--svg {
+  width: 100%;
+  padding-block: 20px;
+  display: flex;
+  justify-content: center;
+  transition: background 0.3s ease-out;
+}
+.sidenav__navItems--svg img {
+  width: 22px;
+  aspect-ratio: 1/1;
+}
+.sidenav__navItems--svg:first-child {
+  background: #f2ece2;
+}
+.sidenav__navItems--svg:hover {
+  background: #f2ece2;
+}
+.sidenav__navItems--query {
+  height: 30px;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.212);
+}
+
+.folder {
+  background: #f2ece2;
+  width: 45svh;
+  height: 100%;
+  transition: width 0.5s ease-out;
+}
+.folder__heading {
+  height: 70px;
+  padding-inline: 30px;
+  padding-block: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.folder__heading h2 {
+  font-size: 2.3rem;
+}
+.folder__heading p {
+  font-size: 1.2rem;
+}
+.folder__container {
+  padding: 35px;
+}
+.folder__container_directory {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.folder__container_directory-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.folder__container_directory-icon {
+  height: 15px;
+  aspect-ratio: 1/1;
+}
+.folder__container_directory-files {
+  padding-left: 20px;
+  font-size: 1.3rem;
+  color: rgba(17, 17, 17, 0.7);
+}
+.folder__container_directory-files--file {
+  margin-bottom: 8px;
+  max-width: 60%;
+}
+.folder__container_directory-files--file:last-child {
+  color: #111111;
+  margin-bottom: 15px;
+}
+.folder.closed {
+  width: 0;
+}
+.folder.closed > * {
+  display: none;
+}
+
+.profile-section {
+  flex: 4;
+  background: white;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+}

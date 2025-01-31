@@ -1,0 +1,64 @@
+@use "../abstracts/variables" as *;
+
+.folder {
+  background: $folder-color;
+  width: 45svh;
+  height: 100%;
+  transition: width 0.5s ease-out;
+
+  &__heading {
+    height: 70px;
+    padding-inline: 30px;
+    padding-block: 10px;
+    // background: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    & h2 {
+      font-size: 2.3rem;
+    }
+    & p {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__container {
+    padding: 35px;
+    &_directory {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      &-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      &-icon {
+        height: 15px;
+        aspect-ratio: 1/1;
+      }
+      &-files {
+        padding-left: 20px;
+        font-size: 1.3rem;
+        color: rgba($black, 0.7);
+        &--file {
+          margin-bottom: 8px;
+          max-width: 60%;
+          &:last-child {
+            color: $black;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  &.closed {
+    width: 0;
+
+    & > * {
+      display: none;
+    }
+  }
+}
